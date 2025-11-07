@@ -1,8 +1,4 @@
-import icn1 from  "../../assets/icon/amazon.png"
-import icn2 from  "../../assets/icon/search-icon.png"
-import icn3 from  "../../assets/icon/cart.png"
-import me from  "../../assets/icon/me.jpg"
-import arrow from  "../../assets/icon/down-arrow.png"
+import logo from '../icon/amazon.png'
 import { FaSearch } from 'react-icons/fa';
 import React from "react";
 import './header.css'
@@ -28,7 +24,7 @@ function Header() {
             </div>
             {/* right side */}
             <div>
-                <img src="" alt="" />
+                <img src={}alt="" />
                 <select name="" id="">
                     <option value="En">EN</option>
                 </select>

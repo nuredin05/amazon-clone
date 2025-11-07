@@ -1,10 +1,10 @@
+import React from "react";
 import logo from  "../../assets/icon/amazon.png"
-import icn2 from  "../../assets/icon/search-icon.png"
-
+import icn2 from  "../../assets/icon/search-icon.jpg"
 import { BsSearch } from 'react-icons/bs';
 import { SlLocationPin } from 'react-icons/sl';
 import { BiCart } from 'react-icons/bi';
-import React from "react";
+import { Link } from "react-router-dom";
 import classes from'./header.module.css'
 import LowerHeader from "./LowerHeader";
 function Header() {
@@ -19,7 +19,7 @@ function Header() {
                 <div className={classes.delivery}>
                     <span> < SlLocationPin/></span>
                     <div >
-                        <p>Delivered To</p>
+                        <p>Delivered href</p>
                         <span>Ethiopia</span>
                     </div>
                  </div>
@@ -41,17 +41,17 @@ function Header() {
                 </select>
                 </a>
             {/* three component */}
-            <a href="">
+            <a href="/Auth">
                 <p>sign in</p>
-                <span>Account $ Lists</span>
+                <span>Account & Lists</span>
             </a>
             {/* orders */}
-            <a href="">
+            <a href="/Orders">
                 <p>Returns</p>
                 <span>& Orders</span>
             </a>
             {/* cart */}
-            <a href=""className={classes.cart}>
+            <a href="/Cart"className={classes.cart}>
            < BiCart size={35} />
             <span>0</span>
             </a>

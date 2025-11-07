@@ -1,14 +1,19 @@
 import React from 'react'
-import classes from './catacory.module.css'
+import classes from './category.module.css'
+import { Link } from 'react-router-dom';
+// import { categoryInfos } from './categoryfullInf';
 function CategoryCard({data}) {
+  console.log(data);
   return (
     <div className={classes.category}> 
-         <a href="">
-            <span><h2>{data.tittle}</h2></span>
-            <img src={data.imgLink} alt="" />
+          <Link to={`/category/${data.name}`}>
+            <span><h2>{data?.title}</h2></span>
+            <img src={data?.image } alt={data.title} className={classes.image}
+      />
+
             <p>Shop Now</p>
-        </a>
-        <h1>img 1</h1>
+        </Link>
+
     </div>
   )
 }export default  CategoryCard;
