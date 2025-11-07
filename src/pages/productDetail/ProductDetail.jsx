@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Layout from '../../components/layout/LayOut'
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
+
 import axios from 'axios'
 import ProductCard from '../../components/product/ProductCard'
 import { ProductUrl } from '../../../api/endPoints'
@@ -9,7 +10,7 @@ import classes from './productDetail.module.css'
 
 export default function ProductDetail() {
 
-  const [productId]=useParams();
+  const [productId]=useParams()
   const [products, setProducts]=useState();
 
   useEffect(()=>{
@@ -25,6 +26,7 @@ export default function ProductDetail() {
   return (
     <div>
       <ProductCard product={products}/>
+      <h1>defsz</h1>
     </div>
   )
 }
