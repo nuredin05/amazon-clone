@@ -1,21 +1,20 @@
 import React, { useEffect ,useState} from 'react'
 import Layout from '../../components/layout/LayOut'
 import axios from 'axios'
-import { data, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { ProductUrl } from '../../../api/endPoints'
-import Products from '../../components/product/Product'
+import Product from '../../components/product/Product'
 import ProductCard from '../../components/product/ProductCard'
 
-import classes from './result.module.css'
+import classes from "./result.module.css";
 export default function Result() {
 
   const [result, setResult]=useState([]);
   const {categoryName}= useParams()
 useEffect(()=>{
-   axios.get(`${ProductUrl}/products/category/${categoryName}`)
+   axios.get(`${ProductUrl}/product/category/${categoryName}`)
   .then((res)=>{
     setResult(res.data)
-    console.log(res.data);
   }).catch((err)=>{
     console.log(err);
   })
@@ -35,7 +34,7 @@ useEffect(()=>{
           <div className={classes.products_container}>
             {
               result?.map((Product)=>(
-                <ProductCard key ={Product.id} product={Product}/>
+                <ProductCard key ={Product.id} product={{Product}}/>
               ))
             }
             
@@ -43,5 +42,5 @@ useEffect(()=>{
 
       </section>
     </div>
-  )
+  );
 }
