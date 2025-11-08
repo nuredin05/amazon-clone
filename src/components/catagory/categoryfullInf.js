@@ -1,22 +1,22 @@
-export const categoryInfos = [
-  {
-    title: "Fjallraven - Foldsack ",
-    category: "clothing",
-    image: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png",
-  },
-  {
-    title: "Mens Casual Premium",
-    category: "electronics",
-    image: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_t.png",
-  },
-  {
-    title: "jawlery",
-    category: "men's clothing",
-    image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_t.png",
-  },
-  {
-    title: "Mens Casual Slim Fit",
-    category: "men's clothing",
-    image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_t.png",
-  },
-];
+export const categoryInfos =[
+    {
+        title:"Electronics",
+        name:"electronics",
+        image:"https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_TV_2X",
+    },
+    {
+        title:"Descover fastion trends",
+        name:"women's clothing",
+        image:"https://images-na.ssl-images-amazon.com/images/G/01/softlines/shopbop/ingress/2023/March/mp_20230219_ff_desktopsinglecategory_desktop_379x304_1",
+    },
+    {
+        title:"Mens Cotton Jacket",
+        name:"men's clothing",
+        image:"https://m.media-amazon.com/images/I/618bcm65ksL.AC_UL480_FMwebp_QL65.jpg",
+    },
+    {
+        title:"White Gold Plated Princess",
+        name:"jewelery",
+        image:"https://m.media-amazon.com/images/I/71r7eWuCsaL.AC_UL480_FMwebp_QL65.jpg",
+    }
+]

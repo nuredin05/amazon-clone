@@ -17,7 +17,7 @@ export default function Routing() {
             <Route path ='/payment' element={<Payment/>}/>
             <Route path ='/orders' element={<Orders/>}/>
             <Route path ='/category/:categoryName' element={<Result/>}/>
-            <Route path="/products/:productId" element={<ProductDetail />} />
+            <Route path='/products/:productId' element={<ProductDetail />} />
 
             <Route path ='/cart' element={<Cart/>}/>
 
