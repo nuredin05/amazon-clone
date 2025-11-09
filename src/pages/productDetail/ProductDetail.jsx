@@ -10,11 +10,11 @@ import classes from './productDetail.module.css'
 
 export default function ProductDetail() {
 
-  const [productId]=useParams()
+  const {productId}=useParams()
   const [products, setProducts]=useState();
 
   useEffect(()=>{
-  axios.get(`${ProductUrl}/product/${productId}`)
+  axios.get(`${ProductUrl}/products/${productId}`)
   .then((res)=>{
     setProducts(res.data)
    setProducts(res.data)
@@ -26,7 +26,6 @@ export default function ProductDetail() {
   return (
     <div>
       <ProductCard product={products}/>
-      <h1>defsz</h1>
     </div>
   );
 }

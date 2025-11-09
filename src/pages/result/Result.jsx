@@ -12,7 +12,7 @@ export default function Result() {
   const [result, setResult]=useState([]);
   const {categoryName}= useParams()
 useEffect(()=>{
-   axios.get(`${ProductUrl}/product/category/${categoryName}`)
+   axios.get(`${ProductUrl}/products/category/${categoryName}`)
   .then((res)=>{
     setResult(res.data)
   }).catch((err)=>{
@@ -34,7 +34,7 @@ useEffect(()=>{
           <div className={classes.products_container}>
             {
               result?.map((Product)=>(
-                <ProductCard key ={Product.id} product={{Product}}/>
+                <ProductCard key ={Product.id} product={Product}/>
               ))
             }
             

@@ -23,8 +23,8 @@ export default function Product() {
       {loading ? (
         <p>Loading products...</p>
       ) : (
-        products.map((producty) => (
-          <ProductCard key={producty.id} Product={producty} />
+        products.map((product) => (
+          <ProductCard key={product.id} product={product} />
         ))
       )}
     </section>
