@@ -1,17 +1,17 @@
-import React from 'react';
-import LayOut from '../../components/layout/LayOut'
-import Carousel from '../../components/caraousel/CarouselEffect';
-import Category from '../../components/catagory/Category';
-import Product from '../../components/product/Product';
+import React from "react";
+import CarouselComponent from "../../Component/Carousel/CarouselComponent";
+import Category from "../../Component/Category/Category";
+import Product from "../../Component/Product/Product";
+import Layout from "../../Component/Layout/Layout";
 
-function Landing() {
+const Landing = () => {
   return (
-    <div>
-      <Carousel />
+    <Layout>
+      <CarouselComponent />
       <Category />
       <Product />
-    </div>
+    </Layout>
   );
-}
+};
 
 export default Landing;

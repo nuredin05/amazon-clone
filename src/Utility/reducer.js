@@ -4,15 +4,16 @@ export const initialState = {
   basket: [],
   user:null
 };
+
 export const reducer = (state, action) => {
   switch (action.type) {
     case Type.ADD_TO_BASKET:
       // Check if the item already exists in the basket
       const existingItem = state.basket.find((item) => item.id === action.item.id);
-      console.log(existingItem);
+      // console.log(existingItem);
 
       if (!existingItem) {
-        console.log("Adding new item to basket:", action.item);
+        // console.log("Adding new item to basket:", action.item);
         return {
           ...state,
           basket: [...state.basket, { ...action.item, amount: 1 }],
@@ -23,7 +24,7 @@ export const reducer = (state, action) => {
             ? { ...item, amount: item.amount + 1 } // Properly return updated item
             : item
         );
-        console.log(updatedBasket);
+        // console.log(updatedBasket);
 
         return {
           ...state,
