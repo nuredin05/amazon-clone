@@ -8,7 +8,7 @@
 .category img {
   width: 100%;
   object-fit: contain;
-  max-height: 250px;
+  max-height: 240px;
   padding: 0 10px;
 }
 .category a {
@@ -22,9 +22,9 @@
   margin-left: 15px;
 }
 .category p {
-  font-size: 12px;
-  font-weight: bold;
-  color: rgb(9, 132, 209);
+  font-size: 15px;
+
+  color: rgb(8, 8, 8);
 }
 .category_container {
   position: relative;
@@ -70,9 +70,8 @@
     max-height: 200px;
   }
 }
-@media screen and (max-width:570px) {
+@media screen and (max-width: 570px) {
   .category_container {
     grid-template-columns: repeat(1, 1fr);
   }
-  
 }

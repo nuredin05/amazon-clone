@@ -4,6 +4,7 @@ import Landing from "./Pages/Landing/Landing";
 import Payment from "./Pages/Payment/Payment";
 import Orders from "./Pages/Orders/Orders";
 import Cart from "./Pages/Cart/Cart";
+import SignUp from "./Pages/Auth/signUp";
 import Results from "./Pages/Results/Results";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import Auth from "./Pages/Auth/Auth";
@@ -44,6 +45,7 @@ export const Routing = () => {
           <Route path="category/:categoryName" element={<Results />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/products/:productId" element={<ProductDetails />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </Router>
     </div>
