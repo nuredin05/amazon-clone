@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Landing from './pages/landing/Landing'
+import Landing from './Pages/landing/Landing';
 import Payment from "./pages/payment/Payment";
 import Orders from "./pages/orders/Orders";
 import Cart from "./pages/cart/Cart";
