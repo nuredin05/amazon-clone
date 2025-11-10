@@ -6,7 +6,7 @@ import CurrencyFormat from "../../Component/CurrencyFormat/CurrencyFormat";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
-import classes from "./Cart.module.css";
+import classes from "./cart.module.css";
 import { Type } from "../../Utility/action.type";
 
 const Cart = () => {
