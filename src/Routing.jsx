@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Landing from "./pages/Landing/Landing";
-import Payment from "./pages/Payment/Payment";
-import Orders from "./pages/orders/Orders";
-import Cart from "./pages/cart/Cart";
-import SignUp from "./pages/Auth/signUp.jsx";
-import Results from "./pages/results/Results";
-import ProductDetails from "./pages/productDetails/ProductDetails";
-import Auth from "./pages/auth/Auth";
+import Landing from "./Pages/Landing/Landing";
+import Payment from "./Pages/Payment/Payment";
+import Orders from "./Pages/orders/Orders";
+import Cart from "./Pages/cart/Cart";
+import SignUp from "./Pages/Auth/signUp.jsx";
+import Results from "./Pages/results/Results";
+import ProductDetails from "./Pages/productDetails/ProductDetails";
+import Auth from "./Pages/auth/Auth";
 import Protect from "./Component/ProtectedRoute/Protect";
 
 import { Elements } from "@stripe/react-stripe-js";
