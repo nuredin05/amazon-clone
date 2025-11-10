@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Landing from "./Pages/Landing/Landing";
-import Payment from "./Pages/Payment/Payment";
-import Orders from "./Pages/orders/Orders";
-import Cart from "./Pages/cart/Cart";
-import SignUp from "./Pages/Auth/signUp.jsx";
-import Results from "./Pages/results/Results";
-import ProductDetails from "./Pages/productDetails/ProductDetails";
-import Auth from "./Pages/auth/Auth";
-import Protect from "./Component/ProtectedRoute/Protect";
+import Landing from './Pages/landing/Landing'
+import Auth from './Pages/auth/Auth'
+import Protect from './Pages/auth/Auth'
+import Payment from './Pages/payment/Payment'
+import Orders from './Pages/orders/Orders'
+import Results from './Pages/results/Results'
+import Cart from './Pages/Cart/Cart'
+import ProductDetails from './Pages/productDetails/ProductDetails'
+import SignUp from './Pages/auth/signUp'
 
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
@@ -24,7 +24,7 @@ export const Routing = () => {
           <Route path="/" element={<Landing />} />
           <Route path="/auth" element={<Auth />} />
           <Route
-            path="/payment"
+            path="/Payment"
             element={
               <Protect msg={"you must login in to pay"} redirect={"/payment"}>
                 <Elements stripe={stripePromise}>
@@ -34,7 +34,7 @@ export const Routing = () => {
             }
           />
           <Route
-            path="/orders"
+            path="/Orders"
             element={
               <Protect
                 msg={"you must login in to access your orders"}
@@ -44,10 +44,10 @@ export const Routing = () => {
               </Protect>
             }
           />
-          <Route path="category/:categoryName" element={<Results />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/products/:productId" element={<ProductDetails />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="Category/:categoryName" element={<Results />} />
+          <Route path="/Cart" element={<Cart />} />
+          <Route path="/Products/:productId" element={<ProductDetails />} />
+          <Route path="/Signup" element={<SignUp />} />
         </Routes>
       </Router>
     </div>
