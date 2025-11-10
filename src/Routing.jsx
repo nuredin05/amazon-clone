@@ -5,7 +5,7 @@ import Payment from "./pages/Payment/Payment";
 import Orders from "./pages/orders/Orders";
 import Cart from "./pages/cart/Cart";
 import SignUp from "./pages/Auth/signUp.jsx";
-import Results from "./Pages/results/Results";
+import Results from "./pages/results/Results";
 import ProductDetails from "./pages/productDetails/ProductDetails";
 import Auth from "./pages/auth/Auth";
 import Protect from "./Component/ProtectedRoute/Protect";
