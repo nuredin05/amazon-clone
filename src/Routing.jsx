@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Landing from "./pages/landing/Landing";
-import Payment from "./pages/payment/Payment";
+import Landing from "./pages/Landing/Landing";
+import Payment from "./pages/Payment/Payment";
 import Orders from "./pages/orders/Orders";
 import Cart from "./pages/cart/Cart";
-import SignUp from "./pages/auth/signUp";
-import Results from "./pages/results/Results";
+import SignUp from "./pages/Auth/signUp.jsx";
+import Results from "./Pages/results/Results";
 import ProductDetails from "./pages/productDetails/ProductDetails";
 import Auth from "./pages/auth/Auth";
-import Protect from "./Component/protectedRoute/Protect";
+import Protect from "./Component/ProtectedRoute/Protect";
 
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
