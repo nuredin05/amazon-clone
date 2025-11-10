@@ -8,9 +8,11 @@ import SignUp from "./Pages/Auth/signUp";
 import Results from "./Pages/Results/Results";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import Auth from "./Pages/Auth/Auth";
+import Protect from "./Component/ProtectedRoute/Protect";
+
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import Protect from "./Component/ProtectedRoute/Protect";
+
 const stripePromise = loadStripe(
   "pk_test_51QN9BGA9PEMJhTAamC1DiYw2eFh5jDnRMWXAiDkFSfrdTN81ssFRXuCvgbh3L0IC2oHJhonnSNZe93D4THUR7Y1a00r5iMXhkZ"
 );
