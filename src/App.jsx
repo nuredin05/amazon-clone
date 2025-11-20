@@ -8,8 +8,8 @@ import Product from './Component/Product/Product'
 import { Routing } from './Routing'
 import Loader from './Component/Loader/Loader'
 import { DataContext } from './Component/DataProvider/DataProvider'
-import { auth } from './Utility/firebase'
-import { Type } from './Utility/action.type'
+import { auth } from './utils/firebase'
+import { Type } from './utils/action.type'
 
 function App() {
   const[{user},dispatch]=useContext(DataContext)

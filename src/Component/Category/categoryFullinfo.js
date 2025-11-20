@@ -15,8 +15,8 @@ export const categoryData=[
         imgLink:"https://m.media-amazon.com/images/I/618bcm65ksL.AC_UL480_FMwebp_QL65.jpg",
     },
     {
-        title:"White Gold Plated ",
-        name:"jeweler's",
+        title:"White Gold Plated Princess",
+        name:"jewelery",
         imgLink:"https://m.media-amazon.com/images/I/71r7eWuCsaL.AC_UL480_FMwebp_QL65.jpg",
     }
 ]

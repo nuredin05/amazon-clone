@@ -6,7 +6,7 @@ import { BiCart } from "react-icons/bi";
 import LowerHeader from "./LowerHeader";
 import { Link } from "react-router-dom";
 import { DataContext } from "../DataProvider/DataProvider";
-import { auth } from "../../Utility/firebase";
+import { auth } from "../../utils/firebase";
 
 const Header = () => {
   const [{ basket, user }, dispatch] = useContext(DataContext);
@@ -34,7 +34,7 @@ const Header = () => {
                 </span>
                 <div>
                   <p>Delivered to</p>
-                  <span>Ethiopian</span>
+                  <span>Ethiopan</span>
                 </div>
               </div>
             </Link>

@@ -5,16 +5,16 @@ import classes from './Product.module.css'
 
 const Product = () => {
     const[products,setProduct]=useState();
-    const[isLoading,setIsLoading]=useState(false)
+    const[isLoading,setisLoading]=useState(false)
 
     useEffect(()=>{
         axios.get("https://fakestoreapi.com/products")
         .then((res)=>{
             setProduct(res.data);
-            setIsLoading(false)
+            setisLoading(false)
         }).catch((err)=>{
             console.log(err)
-            setIsLoading(false)
+            setisLoading(false)
         })
 
     },[])
@@ -23,10 +23,7 @@ const Product = () => {
   isLoading?(<Loader/>):(<section className={classes.product_container}>
   {
       products?.map((singleProduct)=>(
-          <ProductCard 
-          product={singleProduct} 
-          key={singleProduct.id} 
-          renderAdd={true}/>
+          <ProductCard product={singleProduct} key={singleProduct.id} renderAdd={true}/>
 
       ))
   }

@@ -70,8 +70,9 @@
     max-height: 200px;
   }
 }
-@media screen and (max-width: 570px) {
+@media screen and (max-width:570px) {
   .category_container {
     grid-template-columns: repeat(1, 1fr);
   }
+  
 }

@@ -2,13 +2,13 @@ import React, { useContext, useState } from "react";
 import Layout from "../../Component/Layout/Layout";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import classes from "./Signup.module.css";
-import { auth } from "../../Utility/firebase";
+import { auth } from "../../utils/firebase";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 import { DataContext } from "../../Component/DataProvider/DataProvider";
-import { Type } from '../../Utility/action.type'
+import { Type } from "../../utils/action.type";
 import { ClipLoader } from "react-spinners";
 
 const Auth = () => {
@@ -16,46 +16,46 @@ const Auth = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [{ user }, dispatch] = useContext(DataContext);
-  const [isLoading, setIsLoading] = useState({
+  const [isLoading, setisLoading] = useState({
     signIn: false,
     signUp: false,
   });
-
   const navigate=useNavigate()
   const navStateData=useLocation()
-
-  const authHandler = (e) => {
+  console.log(navStateData)
+  const authhandeler = (e) => {
     e.preventDefault();
+    console.log(e.target.name);
     if (e.target.name == "signin") {
-      setIsLoading({ ...isLoading, signIn: true });
+      setisLoading({ ...isLoading, signIn: true });
       signInWithEmailAndPassword(auth, email, password)
         .then((userInfo) => {
           dispatch({
             type: Type.SET_USER,
             user: userInfo.user,
           });
-          setIsLoading({ ...isLoading, signIn: false });
+          setisLoading({ ...isLoading, signIn: false });
           navigate(navStateData?.state?.redirect || "/")
         })
         .catch((err) => {
           setError(err.message);
-          setIsLoading({ ...isLoading, signIn: false });
+          setisLoading({ ...isLoading, signIn: false });
           navigate(navStateData?.state?.redirect || "/")
 
         });
     } else {
-      setIsLoading({ ...isLoading, signUp: true });
+      setisLoading({ ...isLoading, signUp: true });
       createUserWithEmailAndPassword(auth, email, password)
         .then((userInfo) => {
           dispatch({
             type: Type.SET_USER,
             user: userInfo.user,
           });
-          setIsLoading({ ...isLoading, signUp: false });
+          setisLoading({ ...isLoading, signUp: false });
         })
         .catch((err) => {
           setError(err.message);
-          setIsLoading({ ...isLoading, signUp: false });
+          setisLoading({ ...isLoading, signUp: false });
         });
     }
   };
@@ -71,7 +71,7 @@ const Auth = () => {
         </Link>
         {/* form */}
         <div className={classes.login_container}>
-          <h1>Sign In</h1>
+          <h1>Sign-In</h1>
           {
             navStateData?.state?.msg &&(
               <small style={{
@@ -96,7 +96,7 @@ const Auth = () => {
               />
             </div>
             <div>
-              <label htmlFor="password">Password</label>
+              <label htmlFor="passwor">Password</label>
               <input
                 type="password"
                 id="password"
@@ -105,9 +105,9 @@ const Auth = () => {
               />
             </div>
             <button
-              className={classes.sign_btn}
+              className={classes.singn_btn}
               type="submit"
-              onClick={authHandler}
+              onClick={authhandeler}
               name="signin"
             >
               {isLoading.signIn ? (
@@ -125,13 +125,13 @@ const Auth = () => {
           <button
             className={classes.login_create}
             type="submit"
-            onClick={authHandler}
+            onClick={authhandeler}
             name="signup"
           >
             {isLoading.signUp ? (
               <ClipLoader color="#000" size={15} />
             ) : (
-              "Create your Amazon Account"
+              "Create your Amazon Accout"
             )}
           </button>
           {error && (

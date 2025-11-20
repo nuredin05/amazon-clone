@@ -1,34 +1,20 @@
 import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Landing from "./Pages/Landing/Landing";
-// import Auth from './Pages/Auth/Auth';
-// import Protect from "./Pages/Auth/Auth";
-// import Payment from './pages/Payment/Payment';
-// import Orders from './pages/orders/Orders';
-// import Results from './pages/Results/Results';
-// import Cart from "./Pages/Cart/Cart";
-// import ProductDetails from './pages/ProductDetails/ProductDetails';
-// import SignUp from './Pages/Auth/signUp'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Landing from "./pages/Landing/Landing";   // ✅ lowercase 'pages'
-import Auth from "./pages/Auth/Auth";
-import Protect from "./pages/Auth/Auth";      // ✅ Protect should be its own file, not Auth
-import Payment from "./pages/Payment/Payment";
-import Orders from "./pages/Orders/Orders";      // ✅ uppercase 'Orders'
-import Results from "./pages/Results/Results";
-import Cart from "./pages/Cart/Cart";            // ✅ lowercase 'pages'
-import ProductDetails from "./pages/ProductDetails/ProductDetails";
-import SignUp from "./pages/Auth/SignUp";        // ✅ uppercase 'SignUp'
-
+import Landing from "./Pages/Landing/Landing";
+import Payment from "./Pages/Payment/Payment";
+import Orders from "./Pages/Orders/Orders";
+import Cart from "./Pages/Cart/Cart";
+import Results from "./Pages/Results/Results";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails";
+import Auth from "./Pages/Auth/Auth";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-
-
+import Protect from "./Component/ProtectedRoute/Protect";
 const stripePromise = loadStripe(
   "pk_test_51QN9BGA9PEMJhTAamC1DiYw2eFh5jDnRMWXAiDkFSfrdTN81ssFRXuCvgbh3L0IC2oHJhonnSNZe93D4THUR7Y1a00r5iMXhkZ"
 );
 export const Routing = () => {
-   return (
+  return (
     <div>
       <Router future={{ v7_relativeSplatPath: true }}>
         <Routes>
@@ -55,10 +41,9 @@ export const Routing = () => {
               </Protect>
             }
           />
-          <Route path="/category/:categoryName" element={<Results />} />
+          <Route path="category/:categoryName" element={<Results />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/products/:productId" element={<ProductDetails />} />
-          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </Router>
     </div>
