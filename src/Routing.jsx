@@ -6,7 +6,7 @@ import Protect from './pages/Auth/Auth';
 import Payment from './pages/Payment/Payment';
 import Orders from './pages/orders/Orders';
 import Results from './pages/Results/Results';
-import Cart from './pages/cart/Cart';
+import Cart from "./Pages/Cart/Cart";
 import ProductDetails from './pages/ProductDetails/ProductDetails';
 import SignUp from './pages/Auth/signUp'
 
