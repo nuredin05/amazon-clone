@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './Category.module.css'
+import classes from '../Category/Category.module.css'
 import { Link } from 'react-router-dom';
 
 const CategoryCard = ({data}) => {
