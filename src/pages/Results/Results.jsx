@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../../Component/Layout/Layout";
+import Layout from "../../components/Layout/Layout";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { productUrl } from "../../utils/endPoints";
-import ProductCard from "../../Component/Product/ProductCard";
+import ProductCard from "../../components/Product/ProductCard";
 import classes from "./Results.module.css";
-import Loader from "../../Component/Loader/Loader";
+import Loader from "../../components/Loader/Loader";
 
 const Results = () => {
   const { categoryName } = useParams();

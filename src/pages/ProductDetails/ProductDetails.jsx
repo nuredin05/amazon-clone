@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../../Component/Layout/Layout";
+import Layout from "../../components/Layout/Layout";
 import { useParams } from "react-router-dom";
 import { productUrl } from "../../utils/endPoints";
 import axios from "axios";
-import ProductCard from "../../Component/Product/ProductCard";
-import Loader from "../../Component/Loader/Loader";
+import ProductCard from "../../components/Product/ProductCard";
+import Loader from "../../components/Loader/Loader";
 const ProductDetails = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState({});

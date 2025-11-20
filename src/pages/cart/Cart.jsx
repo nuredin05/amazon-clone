@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import Layout from "../../Component/Layout/Layout";
-import { DataContext } from "../../Component/DataProvider/DataProvider";
-import ProductCard from "../../Component/Product/ProductCard";
-import CurrencyFormat from "../../Component/CurrencyFormat/CurrencyFormat";
+import Layout from "../../components/Layout/Layout";
+import { DataContext } from "../../components/DataProvider/DataProvider";
+import ProductCard from "../../components/Product/ProductCard";
+import CurrencyFormat from "../../components/CurrencyFormat/CurrencyFormat";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
