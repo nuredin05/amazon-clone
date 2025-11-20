@@ -1,6 +1,6 @@
 import React from 'react';
 import { categoryData } from './categoryFullinfo';
-import classes from './category.module.css'
+import classes from './Category.module.css'
 import CategoryCard from './CategoryCard';
 
 const Category = () => {
