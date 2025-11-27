@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import Layout from "../../components/Layout/Layout";
+import Layout from "../../Component/Layout/Layout";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import classes from "./Signup.module.css";
 import { auth } from "../../utils/firebase";
@@ -7,7 +7,7 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
-import { DataContext } from "../../components/DataProvider/DataProvider";
+import { DataContext } from "../../Component/DataProvider/DataProvider";
 import { Type } from "../../utils/action.type";
 import { ClipLoader } from "react-spinners";
 

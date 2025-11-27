@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import Layout from "../../components/Layout/Layout";
-import { DataContext } from "../../components/DataProvider/DataProvider";
+import Layout from "../../Component/Layout/Layout";
+import { DataContext } from "../../Component/DataProvider/DataProvider";
 import classes from "./Order.module.css";
 import {
   getFirestore,
@@ -12,7 +12,7 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import { db } from "../../utils/firebase";
-import ProductCard from "../../components/Product/ProductCard";
+import ProductCard from "../../Component/Product/ProductCard";
 
 const Orders = () => {
   const [{ user }, dispatch] = useContext(DataContext);
